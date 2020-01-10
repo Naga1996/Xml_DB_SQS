@@ -35,7 +35,7 @@ namespace Xml_DB_SQS
             ReceiveMessageRequest request = new ReceiveMessageRequest(queueUrl);
             request.MaxNumberOfMessages = 3;
             ReceiveMessageResponse response = access.ReceiveMessageAsync(request).Result;
-            Console.WriteLine("Message is received");
+            Console.WriteLine("Message is successfully received from SQS");
             foreach(var message in response.Messages)
             {
                 string xml = message.Body;
