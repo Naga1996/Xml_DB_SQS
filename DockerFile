@@ -1,0 +1,4 @@
+FROM microsoft/dotnet:2.1-sdk AS  builder
+WORKDIR /Xml_DB_SQS
+COPY ./Xml_DB_SQS/bin/Debug/netcoreapp2.1/./
+ENTRYPOINT dotnet "Xml_DB_SQS.dll"
