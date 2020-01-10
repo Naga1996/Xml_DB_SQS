@@ -31,7 +31,7 @@ namespace Xml_DB_SQS
             //var access = new Amazon.SQS.AmazonSQSClient(Amazon.RegionEndpoint.APSouth1);
 
             string queueUrl = "https://sqs.ap-south-1.amazonaws.com/068090245287/Employee";
-            Console.WriteLine("Its connecting to SQS");
+            Console.WriteLine("It is successfully connected to SQS");
             ReceiveMessageRequest request = new ReceiveMessageRequest(queueUrl);
             request.MaxNumberOfMessages = 3;
             ReceiveMessageResponse response = access.ReceiveMessageAsync(request).Result;
